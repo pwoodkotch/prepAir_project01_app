@@ -1,0 +1,12 @@
+.navbar-item img {
+    max-height: 6.75rem;
+}
+
+.navbar {
+    background-color: #92a8d1;
+}
+
+html {
+    background-color: #92a8d1;
+    height: 100%;
+}
