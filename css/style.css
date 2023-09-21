@@ -1,12 +1,36 @@
+.hero {
+    background-color: black;
+}
+
 .navbar-item img {
     max-height: 6.75rem;
 }
 
-.navbar {
-    background-color: #92a8d1;
+.navbar-item {
+    padding: 0;
 }
 
-html {
-    background-color: #92a8d1;
-    height: 100%;
+.hero .tabs li.is-active a {
+    color: silver;
+    opacity: 1;
+}
+
+h4 {
+    color: silver;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid black;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    border-radius: 6px;
+}
+
+input[type=text]:focus {
+    border: 3px solid white;
 }

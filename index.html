@@ -10,25 +10,75 @@
 </head>
 
 <body>
-    <nav class="navbar is-transparent">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="index.html">
-                <img src="./images/plane_logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112"
-                    height="35">
-            </a>
+    <section class="hero is-fullheight">
+        <!-- Hero head: will stick at the top -->
+        <div class="hero-head">
+            <header class="navbar">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item">
+                            <img src="./images/folded_paper_logo.png" alt="Logo">
+                        </a>
+                    </div>
+                </div>
+            </header>
         </div>
-    </nav>
+        <!-- Hero content: will be in the middle -->
+        <div class="hero-body">
+            <div class="container">
+                <section class="section">
+                    <div class="container columns .is-centered .is-variable is-3">
+                        <div class="column row">
+                            <h4>Enter your destination</h4>
+                            <input type="text" id="destination">
+                        </div>
+                        <div class="column row">
+                            <h4>Duration of stay </h4>
+                            <input type="text" id="duration">
+                        </div>
+                    </div>
+                    <button class="buttons" id="submit">Submit</button>
+                    <button class="buttons" id="previous">View Previous</button>
+                    <div class="tile is-ancestor">
+                        <div class="tile is-vertical is-8">
+                            <div class="tile">
+                                <div class="tile is-parent">
+                                    <article class="tile is-child box">
 
-    <section class="section">
-        <div class="container columns .is-centered .is-variable is-3">
-            <div class="column row">
-                <h4>Enter your destination</h4>
-                <input type="text" id="destination">
+                                        <!-- Put any content you want -->
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="tile is-parent">
+                                <article class="tile is-child box">
+                                    <!-- Put any content you want -->
+                                </article>
+                            </div>
+                        </div>
+                        <div class="tile is-parent">
+                            <article class="tile is-child box">
+                                <!-- Put any content you want -->
+                            </article>
+                        </div>
+                    </div>
+                </section>
             </div>
-            <div class="column row">
-                <h4>Duration of stay </h4>
-                <input type="text" id="duration">
-            </div>
+        </div>
+
+        <!-- Hero footer: will stick at the bottom -->
+        <div class="hero-foot">
+            <nav class="tabs is-boxed is-fullwidth">
+                <div class="container">
+                    <ul>
+                        <li class="is-active"><a>Overview</a></li>
+                        <li><a>Modifiers</a></li>
+                        <li><a>Grid</a></li>
+                        <li><a>Elements</a></li>
+                        <li><a>Components</a></li>
+                        <li><a>Layout</a></li>
+                    </ul>
+                </div>
+            </nav>
         </div>
     </section>
 
