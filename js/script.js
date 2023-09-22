@@ -77,7 +77,38 @@ function showLocation() {
 
 
 
+const apiKey = '358fcb793a53c3da26743ae950044af5'; 
+const zipCode = '07860'; 
+let cityNameCountry = ''
+var weatherOutput = $('#weather')
 
+
+function showWeather() {
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityNameCountry}&units=imperial&appid=${apiKey}`;
+    fetch(apiUrl)
+  .then(response => {
+    if (response.ok) {
+      return response.json();
+    } else {
+      throw new Error('Network response was not ok');
+    }
+  })
+  .then(data => {
+   var info = data.main
+   var place = data.name
+   var temp = data.main.temp
+   var feelsLike = data.main.feels_like
+
+$(weatherOutput).append('<p>' + place + ', ' + temp + ', ' + feelsLike, '</p>')
+  })
+  .catch(error => {
+    console.error('Fetch error:', error);
+  });
+}
+document.querySelector('#submit').addEventListener('click', function () {
+ cityNameCountry = cityInput.val()
+  showWeather()
+})
 
 
 
