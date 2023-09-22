@@ -10,37 +10,37 @@
 </head>
 
 <body>
-    <section class="hero is-fullheight">
+
+    <section class="hero is-fullwidth">
         <!-- Hero head: will stick at the top -->
         <div class="hero-head">
-            <header class="navbar">
-                <div class="container">
-                    <div class="navbar-brand">
-                        <a class="navbar-item">
-                            <img src="./images/folded_paper_logo.png" alt="Logo">
-                        </a>
-                    </div>
+            <div class="container">
+                <div class="navbar-brand">
+                    <a class="navbar-item">
+                        <img id="img" src="./images/folded_paper_logo.png" alt="Logo">
+                    </a>
                 </div>
-            </header>
+            </div>
         </div>
         <!-- Hero content: will be in the middle -->
-        <div class="hero-body">
-            <div class="container">
+        <div class="hero-body is-fullwidth">
+            <div class="container is-fullwidth">
                 <section class="section">
                     <div class="container columns .is-centered .is-variable is-3">
                         <div class="column row">
                             <h4>Enter your destination</h4>
-                            <input type="text" id="destination">
+                            <input type="text" id="destination" placeholder="City, Country ('UK','US')">
                         </div>
                         <div class="column row">
                             <h4>Duration of stay </h4>
-                            <input type="text" id="duration">
+                            <input type="text" id="duration" placeholder="Enter a 'Number' of days">
                         </div>
                     </div>
-                    <button class="buttons" id="submit">Submit</button>
-                    <button class="buttons" id="previous">View Previous</button>
+                    <div class="btns">
+                        <button class="button is-outlined" id="submit">Submit</button>
+                    </div>
                     <div class="tile is-ancestor">
-                        <div class="tile is-vertical is-8">
+                        <div class="tile is-vertical is-8" id="map_weather">
                             <div class="tile">
                                 <div class="tile is-parent">
                                     <article class="tile is-child box">
@@ -55,9 +55,10 @@
                                 </article>
                             </div>
                         </div>
-                        <div class="tile is-parent">
-                            <article class="tile is-child box">
+                        <div class="tile is-parent is-fullwidth" id="prev-destination">
+                            <article class="tile is-child box is-fullwidth" id="article">
                                 <!-- Put any content you want -->
+                                <button class="button is-outlined is-centered" id="previous">View Previous</button>
                             </article>
                         </div>
                     </div>
@@ -66,16 +67,14 @@
         </div>
 
         <!-- Hero footer: will stick at the bottom -->
-        <div class="hero-foot">
+        <div class="hero-foot is-fullwidth">
             <nav class="tabs is-boxed is-fullwidth">
                 <div class="container">
                     <ul>
-                        <li class="is-active"><a>Overview</a></li>
-                        <li><a>Modifiers</a></li>
-                        <li><a>Grid</a></li>
-                        <li><a>Elements</a></li>
-                        <li><a>Components</a></li>
-                        <li><a>Layout</a></li>
+                        <li class="is-active"><a>HTML/CSS</a></li>
+                        <li><a>JAVASCRIPT</a></li>
+                        <li><a>GITHUB</a></li>
+
                     </ul>
                 </div>
             </nav>
