@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWm3pB-J8cLGCUqx3r5G-4vwH2MkGP0wM&libraries=places&callback=initMap"
-    defer></script>
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWm3pB-J8cLGCUqx3r5G-4vwH2MkGP0wM&libraries=places&callback=initMap"
+        defer></script>
 </head>
 
 <body>
@@ -53,7 +53,7 @@
                                 </div>
                             </div>
                             <div class="tile is-parent">
-                                <article class="tile is-child box" id ="weather">
+                                <article class="tile is-child box" id="weather">
                                     <!-- Put any content you want -->
                                 </article>
                             </div>
@@ -74,10 +74,42 @@
             <nav class="tabs is-boxed is-fullwidth">
                 <div class="container">
                     <ul>
-                        <li class="is-active"><a>HTML/CSS</a></li>
-                        <li><a>JAVASCRIPT</a></li>
-                        <li><a>GITHUB</a></li>
+                        <li> <a class="is-active" id="oModal1">HTML/CSS</a></li>
+                        <div id="modal1" class="modal">
 
+                            <div class="modalText">
+                                <span class="close" id="closeModalBtn1">&times;</span>
+                                <h1>HTML/CSS</h1> <br>
+                                <p>Kevin Castro</p> <br>
+                                <p>Brian Maher</p> <br>
+                            </div>
+                        </div>
+                        <li> <a class="is-active" id="oModal2">JAVASCRIPT</a></li>
+                        <div id="modal2" class="modal">
+
+                            <div class="modalText">
+                                <span class="close" id="closeModalBtn2">&times;</span>
+                                <h1>JAVASCRIPT</h1> <br>
+                                <p>Jacob Hoefer</p> <br>
+                                <p>Andrew Optiz</p> <br>
+                                <p>Phillip Woodkotch</p> <br>
+                            </div>
+                        </div>
+                        <li><a class="is-active" id="oModal3">GITHUB</a></li>
+                        <div id="modal3" class="modal">
+                            <!-- Modal content -->
+                            <div class="modalText">
+                                <span class="close" id="closeModalBtn3">&times;</span>
+                                <h1>Our Github Profiles!</h1>
+                                <a class="names" href="https://github.com/Kev-Castro">Kevin Castro's Account </a> <br>
+                                <a class="names" href="https://github.com/BrianJohnMaher">Brian Maher's Account</a> <br>
+                                <a class="names" href="https://github.com/GendySparrowhawk">Jacob Hoefer's Account</a>
+                                <br>
+                                <a class="names" href="https://github.com/andrew-opitz">Andrew Optiz's Account</a> <br>
+                                <a class="names" href="https://github.com/pwoodkotch">Phillip Woodkotch's Account</a>
+                                <br>
+                            </div>
+                        </div>
                     </ul>
                 </div>
             </nav>
@@ -86,7 +118,7 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-        <script src="./js/script.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
