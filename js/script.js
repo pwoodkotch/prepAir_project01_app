@@ -99,7 +99,7 @@ function showWeather() {
       var temp = data.main.temp
       var feelsLike = data.main.feels_like
 
-      $(weatherOutput).append('<p>' + place + ', ' + temp + ', ' + feelsLike, '</p>')
+      $(weatherOutput).append('<ul>' + '<li>' + place  + '</li>' + '<li>' + temp + ' °F' + '</li>' + '<li>' + feelsLike + ' °F' + '</li>', '</ul>')
     })
     .catch(error => {
       console.error('Fetch error:', error);
