@@ -5,7 +5,7 @@ var enter = $('#submit')
 let cityInput = $('#destination')
 var clear = $('#clear')
 var trips = [];
-var previous = document.querySelector('#previous');
+var previous = $('#previous');
 
 // pulls destination fro input and displays on map
 function saveDestination(eventObj) {
@@ -184,3 +184,19 @@ window.addEventListener("click", function (event3) {
   }
 });
 ///MODALS///
+
+
+// local storage recall//
+previous.click(ShowPrevious);
+
+
+
+function ShowPrevious() {
+    console.log(trips);
+    var pastTrips = document.querySelector("#previousTrips");
+trips.forEach(function(trip) {
+    var li = document.createElement('li');
+    li.textContent = trip.city + '  -  ' + trip.duration + ' Days'; 
+    pastTrips.appendChild(li);
+  });
+}
