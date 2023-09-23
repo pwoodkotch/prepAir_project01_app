@@ -25,8 +25,11 @@ body {
     max-height: 6.75rem;
 }
 
-.navbar-item {
+.navbar-item.navbar-link {
     padding: 0;
+    flex-wrap: wrap;
+    align-content: center;
+    left: 300px;
 }
 
 .hero .tabs li.is-active a {
@@ -44,24 +47,14 @@ h4 {
 
 #prev-destination {
     position: relative;
-    /* set container to a relative position */
     width: 500px;
-    /* set your desired width */
     height: 500px;
-    /* set your desired height */
 }
 
 #previous {
     position: absolute;
-    /* set button to an absolute position */
-    /* top: 50%; */
-    /* adjust the top position of the button */
     left: 50%;
-    /* adjust the left position of the button */
     transform: translate(-50%, -200%);
-    /* center the button */
-    /* z-index: 2; */
-    /* set a higher z-index than the image */
     background-color: #fff;
     border-color: #dbdbdb;
     border-width: 1px;
@@ -72,7 +65,11 @@ h4 {
     padding-top: calc(0.5em - 1px);
     white-space: nowrap;
     cursor: pointer;
-    /* change mouse cursor on hover */
+}
+
+.tile.is-child {
+    margin: 0 !important;
+    height: 200px;
 }
 
 #prev-destination {
@@ -152,7 +149,6 @@ h1 {
     text-align: center;
     font-size: larger;
     font-weight: 500;
-    /* text-decoration: underline; */
 }
 
 a.names {
