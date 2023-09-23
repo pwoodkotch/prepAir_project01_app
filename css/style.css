@@ -109,6 +109,25 @@ input[type=text]:focus {
     align-items: center;
 }
 
+ul {
+    list-style-type: none;
+}
+ul li {
+    margin: 25px;
+}
+ul li:nth-child(1)::before {
+    content: "Place: ";
+}
+
+ul li:nth-child(2)::before {
+    content: "Temp: ";
+}
+
+ul li:nth-child(3)::before {
+    content: "Feels Like: ";
+}
+
+
 .modal {
     display: none;
     position: fixed;
