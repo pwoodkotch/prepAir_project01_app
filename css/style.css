@@ -1,4 +1,4 @@
-.hero {
+html () .hero {
     background-color: black;
 }
 
@@ -45,16 +45,10 @@ h4 {
     margin-bottom: 55px;
 }
 
-#prev-destination {
-    position: relative;
-    width: 500px;
-    height: 500px;
-}
-
 #previous {
     position: absolute;
     left: 50%;
-    transform: translate(-50%, -200%);
+    transform: translate(-50%, -150%);
     background-color: #fff;
     border-color: #dbdbdb;
     border-width: 1px;
@@ -69,13 +63,37 @@ h4 {
 
 .tile.is-child {
     margin: 0 !important;
-    height: 200px;
+    min-height: 226px;
+    height: auto;
+}
+
+#previousTile {
+    margin: 0 !important;
+    height: auto;
+}
+
+#weatherTile {
+    margin: 0 !important;
+    height: auto;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 
 #prev-destination {
     position: relative;
     width: 100%;
-    height: 500px;
+    min-height: 500px;
+    height: 100%;
+}
+
+#resize {
+    height: auto;
 }
 
 input[type=text] {
@@ -108,25 +126,6 @@ input[type=text]:focus {
 #article {
     align-items: center;
 }
-
-ul {
-    list-style-type: none;
-}
-ul li {
-    margin: 25px;
-}
-ul li:nth-child(1)::before {
-    content: "Place: ";
-}
-
-ul li:nth-child(2)::before {
-    content: "Temp: ";
-}
-
-ul li:nth-child(3)::before {
-    content: "Feels Like: ";
-}
-
 
 .modal {
     display: none;
@@ -173,4 +172,25 @@ h1 {
 a.names {
     margin: 0;
     text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 10px;
+}
+
+li {
+    padding: 5px;
+}
+
+ul li:nth-child(1)::before {
+    content: "Place: ";
+}
+
+ul li:nth-child(2)::before {
+    content: "Temp: ";
+}
+
+ul li:nth-child(3)::before {
+    content: "Feels Like: ";
 }

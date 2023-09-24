@@ -100,7 +100,7 @@ function showWeather() {
       var temp = data.main.temp
       var feelsLike = data.main.feels_like
 
-      $(weatherOutput).append('<ul>' + '<li>' + place  + '</li>' + '<li>' + temp + ' °F' + '</li>' + '<li>' + feelsLike + ' °F' + '</li>', '</ul>')
+      $(weatherOutput).append('<ul>' + '<li>' + place + '</li>' + '<li>' + temp + ' °F' + '</li>' + '<li>' + feelsLike + ' °F' + '</li>', '</ul>')
     })
     .catch(error => {
       console.error('Fetch error:', error);
@@ -196,13 +196,13 @@ function ShowPrevious() {
   clearCache();
   console.log(trips);
   var pastTrips = document.querySelector("#previousTrips");
-trips.forEach(function(trip) {
-  var li = document.createElement('li');
-  li.textContent = trip.city + '  -  ' + trip.duration + ' Days'; 
-  pastTrips.appendChild(li);
-});
+  trips.forEach(function (trip) {
+    var p = document.createElement('p');
+    p.textContent = trip.city + '  -  ' + trip.duration;
+    pastTrips.appendChild(p);
+  });
 }
 
 function clearCache() {
-pastTrips.innerHTML = '';
+  pastTrips.innerHTML = '';
 }
