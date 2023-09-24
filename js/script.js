@@ -87,7 +87,7 @@ var weatherOutput = $('#weather')
 function showWeather() {
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityNameCountry}&units=imperial&appid=${apiKey}`;
   fetch(apiUrl)
-    .then(response => {
+  .then(response => {
       if (response.ok) {
         return response.json();
       } else {
@@ -99,17 +99,18 @@ function showWeather() {
       var place = data.name
       var temp = data.main.temp
       var feelsLike = data.main.feels_like
-
-      $(weatherOutput).append('<ul>' + '<li>' + place + '</li>' + '<li>' + temp + ' °F' + '</li>' + '<li>' + feelsLike + ' °F' + '</li>', '</ul>')
+      
+  
+      $(weatherOutput).append('<ul>' + '<li class="weather-list">' + place + '</li>' + '<li class="weather-list">' + temp + ' °F' + '</li>' + '<li class="weather-list">' + feelsLike + ' °F' + '</li>', '</ul>')
     })
     .catch(error => {
       console.error('Fetch error:', error);
     });
-}
-document.querySelector('#submit').addEventListener('click', function () {
-  cityNameCountry = cityInput.val()
-  showWeather()
-})
+  }
+  document.querySelector('#submit').addEventListener('click', function () {
+    cityNameCountry = cityInput.val()
+    showWeather()
+  })
 
 
 
