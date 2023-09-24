@@ -173,3 +173,24 @@ a.names {
     margin: 0;
     text-align: center;
 }
+
+ul {
+    list-style-type: none;
+    padding: 10px;
+}
+
+li {
+    padding: 5px;
+}
+
+ul li:nth-child(1)::before {
+    content: "Place: ";
+}
+
+ul li:nth-child(2)::before {
+    content: "Temp: ";
+}
+
+ul li:nth-child(3)::before {
+    content: "Feels Like: ";
+}
