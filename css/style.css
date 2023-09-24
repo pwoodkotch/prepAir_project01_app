@@ -112,9 +112,11 @@ input[type=text]:focus {
 ul {
     list-style-type: none;
 }
+
 ul li {
     margin: 25px;
 }
+
 ul li:nth-child(1)::before {
     content: "Place: ";
 }
