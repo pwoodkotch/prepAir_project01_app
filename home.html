@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>prepAir</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./images/prepAir.plane.png" type="image/x-icon" />
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWm3pB-J8cLGCUqx3r5G-4vwH2MkGP0wM&libraries=places&callback=initMap"
+        defer></script>
+</head>
+
+<body>
+
+    <div class="transition transition-1 is-active"></div>
+
+    <section class="hero is-fullwidth">
+        <div class="hero-head">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a href="index.html" class="navbar-item">
+                        <img id="img" src="./images/folded_paper_logo.png" alt="Logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-body is-fullwidth">
+            <div class="container is-fullwidth">
+                <section class="section">
+                    <div class="container columns .is-centered .is-variable is-3">
+                        <div class="column row">
+                            <h4>Enter Your Destination:</h4>
+                            <input type="text" id="destination"
+                                placeholder="City, State, Country ('US')    Ex: Miami, FL, US">
+                        </div>
+                        <div class="column row">
+                            <h4>Enter Trip Duration:</h4>
+                            <input type="text" id="duration" placeholder="Date Range:   Ex: 9/24/23-9/29/23">
+                        </div>
+                    </div>
+                    <div class="btns">
+                        <button class="button is-outlined" id="submit">Submit</button>
+                    </div>
+                    <div class="tile is-ancestor">
+                        <div class="tile is-vertical is-8" id="map_weather">
+                            <div class="tile">
+                                <div class="tile is-parent">
+                                    <article class="tile is-child box" id="map">
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="tile is-parent">
+                                <article class="tile is-child box" id="weather">
+                                </article>
+                            </div>
+                        </div>
+                        <div class="tile is-parent is-fullwidth" id="prev-destination">
+
+                            <button class="button is-outlined is-centered" id="previous">View Previous</button>
+                            <article class="tile is-child box is-fullwidth" id="previousTrips">
+                            </article>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="hero-foot is-fullwidth">
+            <nav class="tabs is-boxed is-fullwidth">
+                <div class="container">
+                    <ul>
+                        <li> <a class="is-active" id="oModal1">DESIGN</a></li>
+                        <div id="modal1" class="modal">
+
+                            <div class="modalText">
+                                <span class="close" id="closeModalBtn1">&times;</span>
+                                <h1>HTML/CSS</h1> <br>
+                                <p>Kevin Castro</p> <br>
+                                <p>Brian Maher</p> <br>
+                            </div>
+                        </div>
+                        <li> <a class="is-active" id="oModal2">FUNCTIONALITY</a></li>
+                        <div id="modal2" class="modal">
+
+                            <div class="modalText">
+                                <span class="close" id="closeModalBtn2">&times;</span>
+                                <h1>JAVASCRIPT</h1> <br>
+                                <p>Jacob Hoefer</p> <br>
+                                <p>Andrew Optiz</p> <br>
+                                <p>Phillip Woodkotch</p> <br>
+                            </div>
+                        </div>
+                        <li><a class="is-active" id="oModal3">GITHUB</a></li>
+                        <div id="modal3" class="modal">
+                            <div class="modalText">
+                                <span class="close" id="closeModalBtn3">&times;</span>
+                                <h1>Our Github Profiles!</h1>
+                                <a class="names" href="https://github.com/Kev-Castro" target="_blank"
+                                    rel="noopener noreferrer">Kevin Castro's Account </a> <br>
+                                <a class="names" href="https://github.com/BrianJohnMaher" target="_blank"
+                                    rel="noopener noreferrer">Brian Maher's Account</a> <br>
+                                <a class="names" href="https://github.com/GendySparrowhawk" target="_blank"
+                                    rel="noopener noreferrer">Jacob Hoefer's Account</a>
+                                <br>
+                                <a class="names" href="https://github.com/andrew-opitz" target="_blank"
+                                    rel="noopener noreferrer">Andrew Optiz's Account</a> <br>
+                                <a class="names" href="https://github.com/pwoodkotch" target="_blank"
+                                    rel="noopener noreferrer">Phillip Woodkotch's Account</a>
+                                <br>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>
