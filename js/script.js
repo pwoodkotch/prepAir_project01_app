@@ -7,6 +7,10 @@ var clear = $('#clear')
 var trips = [];
 var previous = $('#previous');
 var pastTrips = document.querySelector("#previousTrips");
+const apiKey = '358fcb793a53c3da26743ae950044af5';
+const zipCode = '07860';
+let cityNameCountry = ''
+var weatherOutput = $('#weather')
 
 // pulls destination fro input and displays on map
 function saveDestination(eventObj) {
@@ -16,7 +20,6 @@ function saveDestination(eventObj) {
     city: cityInput.val(),
     duration: durationInput.val()
   }
-  console.log(trip);
   trips.push(trip);
   localStorage.setItem('trips', JSON.stringify(trips));
   showLocation();
@@ -68,20 +71,8 @@ function showLocation() {
   });
 }
 
+// Weather API function call 
 
-
-
-
-
-
-
-
-
-
-const apiKey = '358fcb793a53c3da26743ae950044af5';
-const zipCode = '07860';
-let cityNameCountry = ''
-var weatherOutput = $('#weather')
 
 
 function showWeather() {
