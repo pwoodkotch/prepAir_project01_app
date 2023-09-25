@@ -3,7 +3,7 @@
 
 ---
 
-## [Link to Website](https://pwoodkotch.github.io/prepAir_project01_app/main.html)
+## [Link to Website](https://pwoodkotch.github.io/prepAir_project01_app)
 
 ## Welcome to prepAir!
 
